@@ -172,6 +172,115 @@ opacity:0;
 
 <h1>İyi ki Doğdun Temiz Kalpli Doktorum ❤️</h1>
 
+<head>
+<meta charset="UTF-8">
+<title>Duygusal Mesaj</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+font-family:'Segoe UI';
+color:white;
+overflow:hidden;
+}
+
+/* YILDIZ */
+.star{
+position:fixed;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+0%{opacity:0}
+50%{opacity:1}
+100%{opacity:0}
+}
+
+/* METİN ALANI */
+#container{
+width:70%;
+text-align:center;
+}
+
+/* SATIR */
+.line{
+opacity:0;
+transform:translateY(30px);
+font-size:26px;
+line-height:1.8;
+margin:10px 0;
+text-shadow:0 0 0px #ff4d88;
+}
+
+/* AKTİF ANİMASYON */
+.line.show{
+animation:fadeIn 2s forwards, glow 3s ease-in-out infinite;
+}
+
+/* GİRİŞ */
+@keyframes fadeIn{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* PARLAMA */
+@keyframes glow{
+0%{text-shadow:0 0 5px #ff4d88;}
+50%{text-shadow:0 0 20px #ff4d88;}
+100%{text-shadow:0 0 5px #ff4d88;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<div class="line">utanarak sana elimi atmaya calistigim gunlerden 18.’i yasina kadar; harcadigimiz tum dakikalari, eglenerek gecirdigimiz her zamani ve yuzunu guldurebildigim her ani aklima kazimaya calisiyorum. </div>
+<div class="line">Ben seninle oldugum ilk gunden bu yana hep varligini hissettim ve her zaman en buyuk destekcim oldun, sen farkinda olmasanda basimi yaslayabilecegim bir omuz oldun. </div>
+<div class="line">Bana temiz kalbinin sevgisini hissettirdin. Tartistigimizda bile kendime “umarim suan yaren dersini aksatmiyordur” cumlesini icimden tekrarliyorum. </div>
+<div class="line">Umarim bu dunyada hak ettigin herseyi kazanip, cok istedigin doktor olma hayaline kavusursun. Ben her zaman seni destekleyecek ve gurur duyacagim. </div>
+<div class="line">Gercekden cok incedir, temiz kalbinin icinden gelen bazi narin istekler, durumu kotu olan insanlara yardim etmeyi istemek gibi. Sana soylemiyorum ama emin ol bu hedeflerini gerceklestirmeni ve tum bunlari benim ile birlikte yapmani cok isterim. </div>
+<div class="line"> Seninle hep gurur duyacagim. Iyi bir sevgili oldugun icin ne kadar tesekkur etsem az. Iyi ki dogdun, iyi ki hayatima dokundun ve canimdan bir parca oldun. </div>
+<div class="line"> 18. Yasin sana saglik ve basari getirsin. Seni herseyden cok seviyorum. Dogum gunun kutlu olsun Yarosum. </div>
+
+</div>
+
+<script>
+
+/* YILDIZ */
+for(let i=0;i<80;i++){
+let s=document.createElement("div")
+s.className="star"
+s.style.left=Math.random()*100+"%"
+s.style.top=Math.random()*100+"%"
+document.body.appendChild(s)
+}
+
+/* SATIR SATIR GÖSTER */
+const lines=document.querySelectorAll(".line")
+
+lines.forEach((line,index)=>{
+setTimeout(()=>{
+line.classList.add("show")
+}, index*2000)
+})
+
+</script>
+
+</body>
 <div id="message"></div>
 <div id="counter"></div>
 
@@ -184,7 +293,6 @@ opacity:0;
 <div class="frame"><img src="IMG_1143.jpeg"><div class="caption">2 Nisan 2025</div></div>
 <div class="frame"><img src="IMG_1153.jpeg"><div class="caption">23 Ağustos 2025</div></div>
 <div class="frame"><img src="IMG_1147.jpeg"><div class="caption">24 Şubat 2026</div></div>
-
 </div>
 </div>
 
@@ -218,7 +326,7 @@ typeText()
 }
 
 /* YAZI */
-	const text="Hayatımı değiştirdin..."
+const text="Sen hayatıma girdiğinden beri her şey daha güzel..."
 let i=0
 function typeText(){
 if(i<text.length){
