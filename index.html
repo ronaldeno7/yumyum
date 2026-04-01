@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>İyi ki Doğdun En İyi Kalpli Doktor ❤️</title>
+<title>İyi ki Doğdun Aşkım ❤️</title>
 
 <style>
 body{
@@ -59,14 +59,6 @@ font-size:50px;
 color:#ff4d88;
 }
 
-/* YAZI */
-#message{
-width:70%;
-margin:auto;
-font-size:22px;
-min-height:60px;
-}
-
 /* SAYAC */
 #counter{
 margin-top:20px;
@@ -74,7 +66,39 @@ font-size:22px;
 color:#ff7aa8;
 }
 
-/* FİLM ŞERİDİ */
+/* 💖 SİNEMATİK PARAGRAF */
+#container{
+width:75%;
+margin:40px auto;
+line-height:1.8;
+}
+
+.line{
+opacity:0;
+transform:translateY(30px);
+font-size:22px;
+margin:10px 0;
+white-space:pre-line;
+}
+
+.line.show{
+animation:fadeIn 2s forwards, glow 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes glow{
+0%{text-shadow:0 0 5px #ff4d88;}
+50%{text-shadow:0 0 20px #ff4d88;}
+100%{text-shadow:0 0 5px #ff4d88;}
+}
+
+/* FİLM */
 .filmContainer{
 margin-top:100px;
 overflow:hidden;
@@ -91,20 +115,10 @@ background:#111;
 border:10px solid #222;
 padding:10px;
 width:240px;
-position:relative;
 }
-
-.frame::before,.frame::after{
-content:"";
-position:absolute;
-width:100%;
-height:10px;
-background:repeating-linear-gradient(to right,black 0,black 10px,transparent 10px,transparent 20px);
-}
-.frame::before{top:-10px;}
-.frame::after{bottom:-10px;}
 
 .frame img{width:100%;}
+
 .caption{margin-top:10px;color:#ccc;}
 
 @keyframes move{
@@ -112,7 +126,7 @@ background:repeating-linear-gradient(to right,black 0,black 10px,transparent 10p
 100%{transform:translateX(-100%)}
 }
 
-/* SCROLL FOTO */
+/* SCROLL */
 .section{
 opacity:0;
 transform:translateY(50px);
@@ -126,14 +140,12 @@ transform:translateY(0);
 .section img{
 width:260px;
 border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
-/* BUTON */
+/* FINAL */
 button.final{
 margin:100px 0;
 padding:15px 30px;
-font-size:18px;
 border:none;
 border-radius:30px;
 background:#ff4d88;
@@ -141,23 +153,18 @@ color:white;
 cursor:pointer;
 }
 
-/* FINAL YAZI */
 #finalText{
 font-size:28px;
 margin-top:20px;
 }
 
-/* KALP */
 .heart{
 position:fixed;
 font-size:25px;
 animation:float 3s linear forwards;
 }
 @keyframes float{
-to{
-transform:translateY(-200px);
-opacity:0;
-}
+to{transform:translateY(-200px);opacity:0;}
 }
 </style>
 </head>
@@ -172,58 +179,70 @@ opacity:0;
 
 <h1>İyi ki Doğdun Aşkım ❤️</h1>
 
-<div id="message"></div>
 <div id="counter"></div>
+
+<!-- 💖 PARAGRAF (KESİLMEDİ) -->
+<div id="container">
+
+<div class="line">
+utanarak sana elimi atmaya calistigim gunlerden 18.’i yasina kadar; harcadigimiz tum dakikalari, eglenerek gecirdigimiz her zamani ve yuzunu guldurebildigim her ani aklima kazimaya calisiyorum.
+</div>
+
+<div class="line">
+Ben seninle oldugum ilk gunden bu yana hep varligini hissettim ve her zaman en buyuk destekcim oldun, sen farkinda olmasanda basimi yaslayabilecegim bir omuz oldun.
+</div>
+
+<div class="line">
+Bana temiz kalbinin sevgisini hissettirdin. Tartistigimizda bile kendime “umarim suan yaren dersini aksatmiyordur” cumlesini icimden tekrarliyorum.
+</div>
+
+<div class="line">
+Umarim bu dunyada hak ettigin herseyi kazanip, cok istedigin doktor olma hayaline kavusursun. Ben her zaman seni destekleyecek ve gurur duyacagim.
+</div>
+
+<div class="line">
+Gercekden cok incedir, temiz kalbinin icinden gelen bazi narin istekler, durumu kotu olan insanlara yardim etmeyi istemek gibi. Sana soylemiyorum ama emin ol bu hedeflerini gerceklestirmeni ve tum bunlari benim ile birlikte yapmani cok isterim.
+</div>
+
+<div class="line">
+Seninle hep gurur duyacagim. Iyi bir sevgili oldugun icin ne kadar tesekkur etsem az. Iyi ki dogdun, iyi ki hayatima dokundun ve canimdan bir parca oldun.
+</div>
+
+<div class="line">
+18. Yasin sana saglik ve basari getirsin. Seni herseyden cok seviyorum. Dogum gunun kutlu olsun Yarosum.
+</div>
+
+</div>
 
 <!-- FİLM -->
 <div class="filmContainer">
 <div class="film">
-
 <div class="frame"><img src="IMG_1158.jpeg"><div class="caption">14 Haziran 2024</div></div>
 <div class="frame"><img src="IMG_1134.jpeg"><div class="caption">26 Haziran 2024</div></div>
-<div class="frame"><img src="IMG_1143.jpeg"><div class="caption">2 Nisan 2025</div></div>
-<div class="frame"><img src="IMG_1153.jpeg"><div class="caption">23 Ağustos 2025</div></div>
-<div class="frame"><img src="IMG_1147.jpeg"><div class="caption">24 Şubat 2026</div></div>
-
 </div>
 </div>
 
-<!-- SCROLL FOTO -->
-<div class="section"><img src="IMG_1172.jpg"><p>En Büyük Destekçim ❤️</p></div>
-<div class="section"><img src="IMG_1163.jpg"><p>Bu anı hiç unutmam</p></div>
-<div class="section"><img src="7f2ca9ac-1a4f-4867-9c98-3aea94e5f8e9.jpg"><p> Güzelliğimm</p></div>
+<!-- SCROLL -->
+<div class="section"><img src="IMG_1166.jpeg"><p>Elimi koparttiydin</p></div>
 
 <!-- FINAL -->
 <button class="final" onclick="finalAction()">Son bir şey...</button>
 <div id="finalText"></div>
 
-<!-- MÜZİK -->
 <audio id="music">
 <source src="muzik.mp3">
 </audio>
 
 <script>
 
-/* BAŞLAT */
+/* START */
 function start(){
 document.getElementById("intro").style.display="none"
 document.getElementById("music").play()
-typeText()
-}
-
-/* YAZI */
-	const text="Hayatımı değiştirdin..."
-let i=0
-function typeText(){
-if(i<text.length){
-document.getElementById("message").innerHTML+=text[i]
-i++
-setTimeout(typeText,40)
-}
 }
 
 /* SAYAC */
-function counter(){
+setInterval(()=>{
 const start=new Date("2024-05-23T17:00:00")
 const now=new Date()
 const diff=now-start
@@ -232,9 +251,8 @@ const d=Math.floor(diff/(1000*60*60*24))
 const h=Math.floor((diff/(1000*60*60))%24)
 
 document.getElementById("counter").innerHTML=
-"23 Mayıs'tan beri "+d+" gün "+h+" saat birlikteyiz ❤️"
-}
-setInterval(counter,1000)
+d+" gün "+h+" saat ❤️"
+},1000)
 
 /* YILDIZ */
 for(let i=0;i<80;i++){
@@ -244,6 +262,14 @@ s.style.left=Math.random()*100+"%"
 s.style.top=Math.random()*100+"%"
 document.body.appendChild(s)
 }
+
+/* PARAGRAF ANİMASYON */
+const lines=document.querySelectorAll(".line")
+lines.forEach((line,index)=>{
+setTimeout(()=>{
+line.classList.add("show")
+}, index*2500)
+})
 
 /* SCROLL */
 window.addEventListener("scroll",()=>{
@@ -260,7 +286,7 @@ function finalAction(){
 
 if(step==0){
 document.getElementById("finalText").innerHTML=
-"Seni anlatmaya kelimeler yetmez ama... iyi ki varsın ❤️"
+"Seni her şeyden çok seviyorum ❤️"
 step++
 }else{
 
@@ -271,7 +297,6 @@ h.innerHTML="💖"
 h.style.left=Math.random()*100+"%"
 h.style.top="60%"
 document.body.appendChild(h)
-
 setTimeout(()=>h.remove(),3000)
 }
 }
